@@ -1,12 +1,26 @@
-import React from 'react'
+'use client'
+import React, { useState } from "react";
+import { IDashboardOverview } from "./types";
 
-const OverviewButton = () => {
-  return (
-    <div className='flex flex-col bg-secondary dark:bg-darkSecondary p-8 rounded w-full text-primary'>
-        <span className='font-semibold'>Nyumba</span>
-        <span className='text-xl font-bold'>03</span>
-    </div>
-  )
+interface props {
+  overviews: IDashboardOverview[];
 }
 
-export default OverviewButton
+const OverviewButton: React.FC<props> = ({ overviews }) => {
+  const [active, setActive] = useState(1);
+  return (
+    <>
+      {overviews.map((overview, index) => (
+        <div
+          className={`${active == index+1 ? "bg-secondary dark:bg-darkSecondary text-primary" : "hover:text-primary hover:bg-secondary"} bg-primary flex flex-col  p-8 rounded-lg w-full`}
+          onClick={() => setActive(index + 1)}
+        >
+          <span className="font-semibold">{overview.name}</span>
+          <span className="text-xl font-bold">{overview.number}</span>
+        </div>
+      ))}
+    </>
+  );
+};
+
+export default OverviewButton;

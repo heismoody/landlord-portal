@@ -1,23 +1,50 @@
 import React from "react";
 import OverviewButton from "./components/overviews";
+import Table from "./components/table";
 
 const Dashboard = () => {
+  const overviews = [
+    {
+      id: 1,
+      name: "Nyumba",
+      number: 3,
+    },
+    {
+      id: 2,
+      name: "Vyumba",
+      number: 85,
+    },
+    {
+      id: 3,
+      name: "Wakazi",
+      number: 100,
+    },
+    {
+      id: 4,
+      name: "Mapato",
+      number: 2500000,
+    },
+  ];
+  const headlist = [
+    { id: 1, name: "Jina" },
+    { id: 2, name: "Eneo Lilipo" },
+    { id: 3, name: "Vyumba" },
+    { id: 4, name: "Wapangaji" },
+    { id: 5, name: "" },
+  ];
   return (
     <>
-      <div className="pt-[89px] border-b border-white/10 w-full px-10 shadow-sm">
-        <span>DASHIBODI</span>
+      <div className="pt-10 pb-2 border-b border-white/10 w-full px-10 shadow-sm">
+        <span className="text-xl font-bold">DASHIBODI</span>
       </div>
       <div className="bg-ternary">
         <div className="flex justify-between px-14 gap-x-5 py-8">
-          <OverviewButton />
-          <OverviewButton />
-          <OverviewButton />
-          <OverviewButton />
+          <OverviewButton overviews={overviews} />
         </div>
         <div className="rounded-2xl mx-16 bg-primary dark:bg-darkPrimary py-8">
           <div className="flex justify-between px-10 ">
             <span className="font-bold">Nyumba</span>
-            <div className="bg-secondary w-fit rounded-full p-1">
+            <div className="bg-secondary w-fit rounded-full p-1 flex justify-center items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -92,52 +119,41 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <table className="w-[95%]">
-              <thead>
-                <tr>
-                  <td className="font-bold p-2">Jina</td>
-                  <td className="font-bold py-2">Eneo Lilipo</td>
-                  <td className="font-bold py-2">Vyumba</td>
-                  <td className="font-bold py-2">Wapangaji</td>
-                  <td className="font-bold py-2"></td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="odd:bg-ternary">
-                  <td className="py-3 pl-2">Nyumba 1</td>
-                  <td>Dar es Salaam</td>
-                  <td>40</td>
-                  <td>55</td>
-                  <td>
-                    <span className="border border-secondary text-secondary py-[6px] cursor-pointer px-4 rounded-full ">
-                      View
-                    </span>
-                  </td>
-                </tr>
-                <tr className="odd:bg-ternary">
-                  <td className="py-3 pl-2">Nyumba 2</td>
-                  <td>Dar es Salaam</td>
-                  <td>40</td>
-                  <td>55</td>
-                  <td>
-                    <span className="border border-secondary text-secondary py-[6px] cursor-pointer px-4 rounded-full ">
-                      View
-                    </span>
-                  </td>
-                </tr>
-                <tr className="odd:bg-ternary">
-                  <td className="py-3 pl-2">Nyumba 3</td>
-                  <td>Dar es Salaam</td>
-                  <td>40</td>
-                  <td>55</td>
-                  <td>
-                    <span className="border border-secondary text-secondary py-[6px] cursor-pointer px-4 rounded-full ">
-                      View
-                    </span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <Table headList={headlist}>
+              <tr className="odd:bg-ternary">
+                <td className="py-3 pl-2">Nyumba 1</td>
+                <td>Dar es Salaam</td>
+                <td>40</td>
+                <td>55</td>
+                <td>
+                  <span className="border border-secondary text-secondary py-[6px] cursor-pointer px-4 rounded-full ">
+                    View
+                  </span>
+                </td>
+              </tr>
+              <tr className="odd:bg-ternary">
+                <td className="py-3 pl-2">Nyumba 2</td>
+                <td>Dar es Salaam</td>
+                <td>40</td>
+                <td>55</td>
+                <td>
+                  <span className="border border-secondary text-secondary py-[6px] cursor-pointer px-4 rounded-full ">
+                    View
+                  </span>
+                </td>
+              </tr>
+              <tr className="odd:bg-ternary">
+                <td className="py-3 pl-2">Nyumba 3</td>
+                <td>Dar es Salaam</td>
+                <td>40</td>
+                <td>55</td>
+                <td>
+                  <span className="border border-secondary text-secondary py-[6px] cursor-pointer px-4 rounded-full ">
+                    View
+                  </span>
+                </td>
+              </tr>
+            </Table>
           </div>
 
           <div className="py-2 mt-8 mx-6 bg-ternary flex gap-3 px-5 rounded-xl justify-between">

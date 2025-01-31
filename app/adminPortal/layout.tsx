@@ -1,10 +1,29 @@
 import React, { Children } from "react";
+import SideBarList from "./dashboard/components/sideBarList";
 
 interface props {
   children: React.ReactNode;
 }
 
 const PortalLayout = ({ children }: props) => {
+  const lists = [
+    {
+      id: 1,
+      name: "Dashibodi",
+    },
+    {
+      id: 2,
+      name: "Nyumba",
+    },
+    {
+      id: 3,
+      name: "Wapangi",
+    },
+    {
+      id: 4,
+      name: "Malipo",
+    },
+  ];
   return (
     <div className="flex w-full bg-primary dark:bg-darkPrimary">
       <div className="h-screen w-[15%] flex flex-col items-center space-y-8 py-12 border-r border-white/10">
@@ -32,14 +51,31 @@ const PortalLayout = ({ children }: props) => {
             fill="#45A9EA"
           />
         </svg>
-        <ul className="w-full">
-          <li className="bg-secondary dark:bg-darkSecondary m-2 px-20 py-1 rounded cursor-pointer">Dashbodi</li>
-          <li className="m-2 px-20 py-1 rounded cursor-pointer">Nyumba</li>
-          <li className=" m-2 px-20 py-1 rounded cursor-pointer">Wapangi</li>
-          <li className=" m-2 px-20 py-1 rounded cursor-pointer">Malipo</li>
-        </ul>
+        <SideBarList lists={lists} />
       </div>
       <div className="w-[85%]">
+        <div className="flex justify-end w-[97%]">
+          <div className="flex items-center gap-2 pt-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-10"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              />
+            </svg>
+            <div className="flex flex-col">
+              <span className="font-bold ">Mwenye Nyumba</span>
+              <span className="text-black/40 text-base">MwenyeNyumba</span>
+            </div>
+          </div>
+        </div>
         {children}
       </div>
     </div>
