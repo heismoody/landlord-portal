@@ -1,23 +1,27 @@
 import React, { Children } from "react";
-import SideBarList from "./dashboard/components/sideBarList";
+import SideBarList from "./components/sideBarList";
+import { ISideBarList } from "./components/types";
 
 interface props {
   children: React.ReactNode;
 }
 
 const PortalLayout = ({ children }: props) => {
-  const lists = [
+  const lists : ISideBarList[] = [
     {
       id: 1,
       name: "Dashibodi",
+      route: "/"
     },
     {
       id: 2,
       name: "Nyumba",
+      route: "/nyumba"
     },
     {
       id: 3,
-      name: "Wapangi",
+      name: "Wapangaji",
+      route: "/wapangaji"
     },
     {
       id: 4,

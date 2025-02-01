@@ -1,6 +1,7 @@
 export interface ISideBarList{
     id: number;
     name: string;
+    route?: string;
 }
 
 export interface IDashboardOverview {
