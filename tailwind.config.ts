@@ -14,8 +14,8 @@ const config: Config = {
         primary: "#ffffff",
         secondary: "#45A9EA",
         ternary: "#f4f6f6",
-        darkPrimary: "#030713",
-        darkSecondary: "#4a5565"
+        darkPrimary: "#202029",
+        darkSecondary: "#15161B"
       },
     },
   },

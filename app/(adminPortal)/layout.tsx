@@ -57,7 +57,7 @@ const PortalLayout = ({ children }: props) => {
         </svg>
         <SideBarList lists={lists} />
       </div>
-      <div className="w-[85%]">
+      <div className="w-[85%] dark:bg-darkSecondary">
         <div className="flex justify-end w-[97%]">
           <div className="flex items-center gap-2 pt-4">
             <svg
@@ -76,7 +76,7 @@ const PortalLayout = ({ children }: props) => {
             </svg>
             <div className="flex flex-col">
               <span className="font-bold ">Mwenye Nyumba</span>
-              <span className="text-black/40 text-base">MwenyeNyumba</span>
+              <span className="text-black/40 text-base dark:text-primary/60">MwenyeNyumba</span>
             </div>
           </div>
         </div>

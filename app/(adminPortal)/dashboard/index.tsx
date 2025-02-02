@@ -38,14 +38,14 @@ const Dashboard = () => {
   ];
   return (
     <>
-      <div className="pt-10 pb-2 border-b border-white/10 w-full px-10 shadow-sm">
+      <div className="pt-10 pb-2 border-b border-white/10 w-full px-10 shadow-sm dark:bg-darkSecondary">
         <span className="text-xl font-bold">DASHIBODI</span>
       </div>
-      <div className="bg-ternary">
+      <div className="bg-ternary dark:bg-darkSecondary">
         <div className="flex justify-between px-14 gap-x-5 py-8">
           <OverviewButton overviews={overviews} />
         </div>
-        <div className="rounded-2xl mx-16 bg-primary dark:bg-darkPrimary py-8">
+        <div className="rounded-t-2xl mx-16 bg-primary dark:bg-darkPrimary py-8">
           <div className="flex justify-between px-10 ">
             <span className="font-bold">Nyumba</span>
             <div className="bg-secondary w-fit rounded-full p-1 flex justify-center items-center">
@@ -64,14 +64,14 @@ const Dashboard = () => {
               </svg>
             </div>
           </div>
-          <div className="py-3 bg-ternary m-5 flex gap-3 px-5 rounded-xl">
+          <div className="py-3 bg-ternary dark:bg-darkSecondary m-5 flex gap-3 px-5 rounded-xl">
             <TableSearchBar placeholder="Tafta Nyumba"/>
             <TableSort />
             <TableTaarifa />
           </div>
           <div className="flex justify-center">
             <Table headList={headlist}>
-              <tr className="odd:bg-ternary">
+              <tr className="odd:bg-ternary odd:dark:bg-darkSecondary">
                 <td className="py-3 pl-2">Nyumba 1</td>
                 <td>Dar es Salaam</td>
                 <td>40</td>
@@ -82,7 +82,7 @@ const Dashboard = () => {
                   </span>
                 </td>
               </tr>
-              <tr className="odd:bg-ternary">
+              <tr className="odd:bg-ternary odd:dark:bg-darkSecondary">
                 <td className="py-3 pl-2">Nyumba 2</td>
                 <td>Dar es Salaam</td>
                 <td>40</td>
@@ -93,7 +93,7 @@ const Dashboard = () => {
                   </span>
                 </td>
               </tr>
-              <tr className="odd:bg-ternary">
+              <tr className="odd:bg-ternary odd:dark:bg-darkSecondary">
                 <td className="py-3 pl-2">Nyumba 3</td>
                 <td>Dar es Salaam</td>
                 <td>40</td>

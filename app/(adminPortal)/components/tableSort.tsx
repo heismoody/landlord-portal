@@ -2,7 +2,7 @@ import React from "react";
 
 const TableSort = () => {
   return (
-    <div className="flex items-center gap-2 text-secondary bg-primary w-fit rounded-xl border-[1px] border-black/10 px-3 py-2">
+    <div className="flex items-center gap-2 text-secondary bg-primary dark:bg-darkPrimary w-fit rounded-xl border-[1px] border-black/10 px-3 py-2">
       <div>
         <svg
           width="20"

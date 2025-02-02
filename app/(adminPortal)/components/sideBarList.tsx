@@ -17,7 +17,7 @@ const SideBarList: React.FC<props> = ({ lists }) => {
             className={`${
               active == index + 1
                 ? "bg-secondary dark:bg-darkSecondary text-primary"
-                : "hover:bg-secondary hover:text-primary"
+                : "hover:bg-secondary hover:text-primary hover:dark:bg-darkSecondary"
             }  m-2 px-20 py-2 rounded cursor-pointer`}
             onClick={() => setActive(index + 1)}
           >
